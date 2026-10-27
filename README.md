@@ -26,21 +26,21 @@ Jde o výchozí předpoklady, které zatím nejsou ověřené výzkumem cílové
 
 ## Nabízená hodnota
 
-Pracovní koncept lead magnetu je přehledné srovnání vybraných amerických ETF a jejich evropských alternativ.
+Pracovním konceptem je interaktivní srovnání vybraných ETF obchodovaných na NYSE a jejich relevantních evropských alternativ.
 
-Návštěvník nejdříve uvidí ukázku srovnání a konkrétní údaje zdarma. Následně dostane možnost získat kompletní přehled výměnou za svůj e-mail.
+Návštěvník si může prohlédnout ukázku dat a pracovat se srovnáním přímo na stránce. Po zadání e-mailu a úspěšném uložení kontaktu se mu zpřístupní kompletní výsledky včetně zdrojů, nákladovosti a vysvětlení důležitých rozdílů. Formulář bude obsahovat pouze e-mailovou adresu, která je pro tento účel dostačující.
 
-Plánuji, aby po úspěšném odeslání formuláře získal přístup ke kompletnímu srovnání ve formátu PDF. Formulář bude obsahovat pouze e-mailovou adresu, která je pro tento účel dostačující.
+Hlavní hodnotou není stažitelný dokument, ale možnost rychle se zorientovat v konkrétních fondech bez nutnosti samostatně procházet jejich dokumentaci.
 
-Přesný seznam fondů a obsah materiálu budou dokončeny po ověření dat.
+Přesný seznam fondů a obsah srovnání budou dokončeny po ověření dat.
 
 ## Návrh uživatelské cesty
 
 1. **Příchod z reklamy:** První obrazovka odpovídá příslibu reklamy a okamžitě vysvětluje, co návštěvník získá.
 2. **Ukázka srovnání:** Návštěvník uvidí skutečná data a pochopí hodnotu kompletního přehledu.
-3. **Výzva k akci:** Stránka nabídne získání kompletního srovnání.
+3. **Výzva k akci:** Stránka nabídne odemknutí kompletního srovnání.
 4. **Získání kontaktu:** Návštěvník zadá pouze e-mail.
-5. **Dokončení:** Po úspěšném uložení kontaktu získá přístup k slíbenému PDF.
+5. **Dokončení:** Po úspěšném uložení kontaktu se přímo na stránce odemknou kompletní výsledky včetně detailů a zdrojů.
 
 Pořadí sekcí vychází z toho, že návštěvník přichází z mobilní reklamy a nemá důvod věnovat stránce mnoho času, dokud nevidí její hodnotu.
 
@@ -68,7 +68,7 @@ Konkrétní fondy a jejich údaje budou doplněny po ověření zdrojů.
 
 ## Měření konverzního procesu
 
-Cílem je měřit celou cestu návštěvníka od příchodu na stránku až po získání nabízeného materiálu.
+Cílem je měřit celou cestu návštěvníka od příchodu na stránku až po odemknutí kompletního srovnání.
 
 Plánované události:
 
@@ -76,7 +76,7 @@ Plánované události:
 - `comparison_interaction` – interakce se srovnávací tabulkou nebo jejími prvky.
 - `lead_form_start` – zahájení vyplňování formuláře.
 - `lead_submit_success` – úspěšné uložení kontaktu.
-- `resource_download` – stažení kompletního přehledu.
+- `comparison_unlocked` – odemknutí a zobrazení kompletního srovnání.
 
 Pomocí UTM parametrů bude možné rozlišit návštěvy z jednotlivých variant reklamy.
 
@@ -210,7 +210,7 @@ Před odevzdáním bude ověřeno zejména:
 - Funkčnost formuláře a skutečné uložení kontaktu.
 - Správné zaznamenávání analytických událostí.
 - Validace formuláře a chybové stavy.
-- Funkčnost odkazu na slíbený materiál.
+- Funkčnost odemknutí kompletního srovnání po odeslání kontaktu.
 - Funkčnost veřejně dostupné nasazené aplikace.
 
 Výsledky testů, použitý technologický stack, URL nasazené aplikace a známá omezení doplním podle skutečného stavu řešení.
