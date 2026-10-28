@@ -74,14 +74,28 @@ Názvy značek fondů se nemusí shodovat s právním označením investičního
 
 ### Evropské UCITS alternativy
 
-Evropské UCITS fondy budou uvedeny jako **alternativy ke srovnání**, nikoli automaticky jako totožné nebo plnohodnotně ekvivalentní produkty. U každé dvojice je potřeba ověřit přinejmenším index, strategii, složení portfolia, nákladovost, měnu a burzu obchodování.
+Níže jsou pracovní kandidáti na evropské alternativy k pěti americkým ETF. Nejde automaticky o totožné fondy: u každé dvojice je potřeba rozlišit, jestli sledují stejný index, nebo mají pouze podobné zaměření. U evropských fondů používám ISIN jako hlavní identifikátor, protože ticker se může lišit podle burzy a měny obchodování.
 
-První ověřený kandidát pro tematické srovnání s `SHOC`:
+**Datum kontroly zdrojů: 28. 10. 2026.** U nákladovosti je uveden údaj publikovaný správcem; před zveřejněním aplikace je potřeba ověřit, zda se dokumentace nezměnila.
 
-- **VanEck Semiconductor UCITS ETF** (`SMH`, ISIN `IE00BMC38736`): emitent uvádí Total Expense Ratio **0,35 %** a index **MarketVector US Listed Semiconductor 10% Capped Screened Index**. [Oficiální stránka VanEck pro české individuální investory](https://www.vaneck.com/CZ/en/investments/semiconductor-etf/index/)
-- Tento fond má podobné sektorové zaměření jako SHOC, ale sleduje jiný index. Je tedy kandidátem pro srovnání sektorové expozice, nikoli potvrzeným ekvivalentem SHOC.
+| Americké ETF (NYSE) | Nákladovost US | Evropský UCITS kandidát | ISIN evropského fondu | TER | Jak se fondy podobají a liší | Zdroje |
+|---|---:|---|---|---:|---|---|
+| `DRLL` – Strive U.S. Energy ETF | 0,41 % | SPDR S&P U.S. Energy Select Sector UCITS ETF | `IE00BWBXM492` | 0,15 % | Oba poskytují expozici vůči americkému energetickému sektoru. Sledují ale odlišné indexy: DRLL uvádí Bloomberg US Energy Select Index, zatímco SPDR sleduje S&P Energy Select Sector Daily Capped 25/20 Index. Jde o sektorovou alternativu, ne přesnou kopii. | [SPDR – oficiální stránka](https://www.ssga.com/uk/en_gb/intermediary/etfs/funds/spdr-sp-us-energy-select-sector-ucits-etf-sxle-gy) · [JustETF](https://www.justetf.com/en/etf-profile.html?isin=IE00BWBXM492) |
+| `SHOC` – Strive U.S. Semiconductor ETF | 0,40 % | VanEck Semiconductor UCITS ETF | `IE00BMC38736` | 0,35 % | Oba fondy se zaměřují na polovodičový sektor. VanEck sleduje MarketVector US Listed Semiconductor 10% Capped Screened Index, který zastropovává váhu jednotlivých společností; SHOC používá Bloomberg US Listed Semiconductors Select Total Return Index. | [VanEck – oficiální stránka](https://www.vaneck.com/nl/en/investments/semiconductor-etf/) · [JustETF](https://www.justetf.com/en/etf-profile.html?isin=IE00BMC38736) |
+| `BUXX` – Strive Enhanced Income Short Maturity ETF | 0,26 % | JPMorgan USD Ultra-Short Income Active UCITS ETF – USD (Acc) | `IE00BG8BCY43` | 0,18 % | Oba fondy jsou aktivně řízené a zaměřují se na krátkodobé dluhové instrumenty v USD. Lišit se mohou složením portfolia a mírou expozice vůči strukturovaným úvěrům, takže nejde o totožné strategie. | [J.P. Morgan – oficiální stránka](https://am.jpmorgan.com/gb/en/asset-management/adv/products/jpm-usd-ultra-short-income-ucits-etf-usd-acc-ie00bg8bcy43) · [JustETF](https://www.justetf.com/en/etf-profile.html?isin=IE00BG8BCY43) |
+| `BOND` – PIMCO Active Bond ETF | 0,54 % net; 0,56 % gross | SPDR Bloomberg U.S. Aggregate Bond UCITS ETF (Dist) | `IE00B459R192` | 0,17 % | Oba se vztahují k širokému americkému trhu dluhopisů investičního stupně a k benchmarku Bloomberg U.S. Aggregate Index. PIMCO BOND je aktivně řízený fond, SPDR index sleduje pasivně. | [SPDR – oficiální stránka](https://www.ssga.com/uk/en_gb/intermediary/etfs/funds/spdr-bloomberg-us-aggregate-bond-ucits-etf-dist-usag-gy) · [JustETF](https://www.justetf.com/en/etf-profile.html?isin=IE00B459R192) |
+| `BCEM` – Baron Emerging Markets Select ETF | 0,80 % | JPMorgan Global Emerging Markets Research Enhanced Index Equity Active UCITS ETF – USD (Acc) | `IE00BF4G6Z54` | 0,30 % | Oba fondy aktivně investují do akcií rozvíjejících se trhů a používají MSCI Emerging Markets jako benchmark. Baron má koncentrovanější růstově orientovaný výběr akcií, zatímco JPMorgan používá širší výzkumně řízenou strategii. Nejde o stejné portfolio. | [J.P. Morgan – oficiální stránka](https://am.jpmorgan.com/gb/en/asset-management/adv/products/jpm-global-emerging-markets-research-enhanced-index-equity-esg-ucits-etf-usd-acc-ie00bf4g6z54) · [JustETF](https://www.justetf.com/en/etf-profile.html?isin=IE00BF4G6Z54) |
 
-Pro ostatní čtyři americké fondy zatím README **neprohlašuje konkrétní UCITS fond za ověřenou alternativu**. Dvojice se doplní až po dohledání a porovnání primárních zdrojů. Pokud nebude nalezena dostatečně podobná alternativa, bude tato skutečnost uvedena otevřeně místo výběru zavádějícího protějšku.
+#### Co z toho plyne pro landing page
+
+- U `DRLL` a `SHOC` lze srovnávat především sektorové zaměření, nákladovost a rozdíly mezi indexy.
+- U `BUXX` je potřeba zdůraznit, že oba fondy jsou aktivně řízené, ale nemusí mít shodnou úvěrovou expozici.
+- U `BOND` je rozdíl dobře vysvětlitelný jako aktivní správa oproti pasivnímu sledování širokého amerického dluhopisového indexu.
+- U `BCEM` je vhodné srovnávat investiční přístup k rozvíjejícím se trhům, nikoliv prezentovat evropský fond jako kopii portfolia Baron.
+
+Ticker evropského fondu závisí na konkrétní burze a měně obchodování. V aplikaci proto bude ISIN hlavním identifikátorem a konkrétní ticker/listing bude uveden jen tehdy, pokud bude ověřen pro zvolenou burzu.
+
+Tyto fondy jsou zatím kandidáty pro srovnání. Před použitím v aplikaci je nutné ještě jednou zkontrolovat oficiální údaje, především identifikaci třídy fondu, aktuální TER, index a zdroje. HTTP 200 u odkazu potvrzuje dostupnost stránky, ne správnost tvrzení na ní.
 
 ### Pravidla pro prezentaci dat
 
