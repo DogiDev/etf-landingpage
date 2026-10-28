@@ -7,7 +7,7 @@
 
 Cílem je vytvořit mobilní-first landing page pro českého drobného investora, který přichází z reklamy a během několika sekund se musí rozhodnout, jestli má smysl na stránce zůstat.
 
-Stránka nabídne srozumitelné srovnání vybraných ETF obchodovaných na NYSE a jejich evropských alternativ. Hlavním cílem je získat kontakt návštěvníka výměnou za konkrétní a užitečný srovnávací přehled.
+Stránka nabídne srozumitelné srovnání vybraných ETF s ověřeným primárním listingem na NYSE a těch evropských UCITS alternativ, u kterých se podaří doložit podobnost strategie nebo indexu. Hlavním cílem je získat kontakt návštěvníka výměnou za konkrétní a užitečný srovnávací přehled.
 
 Nejde pouze o hezký design. Důležitá je celá cesta návštěvníka, důvěryhodnost dat, funkční získávání kontaktů a měření jednotlivých kroků konverzního procesu.
 
@@ -32,7 +32,7 @@ Návštěvník si může prohlédnout ukázku dat a pracovat se srovnáním př�
 
 Hlavní hodnotou není stažitelný dokument, ale možnost rychle se zorientovat v konkrétních fondech bez nutnosti samostatně procházet jejich dokumentaci.
 
-Přesný seznam fondů a obsah srovnání budou dokončeny po ověření dat.
+Základní výběr pěti amerických ETF s primárním listingem na NYSE je předběžně ověřen. Evropské alternativy budou do srovnání zařazeny až po kontrole indexu, strategie, nákladů a dostupné dokumentace.
 
 ## Návrh uživatelské cesty
 
@@ -46,25 +46,52 @@ Pořadí sekcí vychází z toho, že návštěvník přichází z mobilní rekl
 
 ## Data a jejich ověřování
 
-Do hlavního srovnání budou zařazeny pouze ETF skutečně obchodované na **NYSE**. ETF obchodované na NYSE Arca, Nasdaq nebo jiných amerických burzách nebudou do hlavního výběru zahrnuty.
+**Datum kontroly základního výběru: 28. 10. 2026.** Níže uvedené údaje vycházejí primárně z oficiálních produktových stránek emitentů, prospektů a podání u americké Komise pro cenné papíry (SEC). Odkazy směřují přímo na konkrétní fond nebo jeho oficiální dokumentaci.
 
-U každého fondu bude ověřeno:
+Do hlavního srovnání budou zařazeny pouze ETF, u kterých oficiální zdroj výslovně potvrzuje primární listing na **New York Stock Exchange (NYSE)**. NYSE Arca ani Nasdaq nesplňují podmínku tohoto projektu.
 
-- Název a ticker.
-- Burza, na které se obchoduje.
-- Sledovaný index nebo investiční strategie.
-- Roční nákladovost fondu (TER, případně odpovídající údaj uváděný emitentem).
-- Typ fondu a další údaje důležité pro srovnání.
+### Předběžně ověřený výběr amerických ETF
 
-U každého údaje bude evidován zdroj, datum ověření a případně datum, ke kterému se údaj vztahuje. Vycházet budu především z oficiálních stránek emitentů, dokumentace fondů a zdrojů burzy.
+| Ticker | Fond | Primární burza | Roční náklady uváděné emitentem | Strategie / srovnávací index | Základní zdroj |
+|---|---|---|---|---|---|
+| `DRLL` | Strive U.S. Energy ETF | NYSE | Expense Ratio **0,41 %** | Pasivní expozice vůči americkému energetickému sektoru. Emitent uvádí Bloomberg US Energy Select Index; změna indexu platí od 11. 4. 2024. | [Oficiální stránka DRLL](https://www.strivefunds.com/drll) · [Prospekt Strive (PDF)](https://www.strivefunds.com/documents/FG/strive_funds/fund_docs/638127_Strive_Prospectus.pdf) |
+| `SHOC` | Strive U.S. Semiconductor ETF | NYSE | Expense Ratio **0,40 %** | Pasivní expozice vůči americkému polovodičovému sektoru. Emitent uvádí Bloomberg US Listed Semiconductors Select Total Return Index; změna indexu platí od 21. 3. 2024. | [Oficiální stránka SHOC](https://www.strivefunds.com/shoc) · [Prospekt Strive (PDF)](https://www.strivefunds.com/documents/FG/strive_funds/fund_docs/638127_Strive_Prospectus.pdf) |
+| `BUXX` | Strive Enhanced Income Short Maturity ETF | NYSE | Expense Ratio **0,26 %** | Aktivně řízené ETF zaměřené na krátkodobá aktiva investičního stupně ve strukturovaném úvěrovém sektoru a v sektoru podnikových dluhopisů investičního stupně. V použitých materiálech není uveden sledovaný index, proto se žádný nedoplňuje odhadem. | [Oficiální stránka BUXX](https://www.strivefunds.com/buxx) · [Prospekt BUXX (PDF)](https://www.strivefunds.com/documents/FG/strive_funds/fund_docs/638178_Strive_Prospectus.pdf) |
+| `BOND` | PIMCO Active Bond Exchange-Traded Fund | NYSE | Net Expense Ratio **0,54 %**; Gross **0,56 %**; Adjusted **0,45 %** podle oficiálního přehledu PIMCO k 31. 3. 2026 | Aktivně řízené portfolio kvalitních dluhopisů, investuje primárně do dluhu investičního stupně. Srovnávací index: Bloomberg U.S. Aggregate Index. | [Produktová stránka PIMCO](https://www.pimco.com/us/en/investments/etf/pimco-active-bond-exchange-traded-fund/usetf-usd) · [Přehled PIMCO k 31. 3. 2026](https://www.pimco.com/us/en/documents/59144abed4eff08608a1795abb7f24995835fe75754d94a5b2de52ae747e3e03a0484a00da3a59f799223b6307c30e37?app=dot) · [Zpráva fondu podaná SEC – listing NYSE](https://www.sec.gov/Archives/edgar/data/1450011/000119312526382370/d105698dncsr.htm) |
+| `BCEM` | Baron Emerging Markets Select ETF | NYSE | Total Annual Fund Operating Expenses **0,80 %**; management fee **0,80 %** podle prospektu | Aktivně řízené akciové ETF zaměřené na růstové společnosti na rozvíjejících se trzích. Stránka správce porovnává výkonnost s MSCI Emerging Markets Index a MSCI Emerging Markets IMI Growth Index; tyto indexy proto nejsou bez dalšího označovány za index, který fond pasivně sleduje. | [Produktová stránka Baron Capital](https://www.baroncapitalgroup.com/product-detail/baron-emerging-markets-select-etf-bcem) · [Prospekt podaný SEC](https://www.sec.gov/Archives/edgar/data/2081199/000119312526063204/d20607d485bpos.htm) · [Oznámení o uvedení fondu](https://www.baroncapitalgroup.com/news-and-press/baron-capital-launches-baron-emerging-markets-select-etf) |
 
-Evropské UCITS fondy budou sloužit pouze jako alternativy ke srovnávaným americkým ETF. U každé dvojice bude rozlišeno, zda oba fondy sledují stejný index, nebo mají pouze podobnou investiční strategii.
+### Doplňující ověřené údaje a důležité opravy
 
-U evropských alternativ bude samostatně uvedena jejich burza. Nebudu tvrdit, že jsou dva fondy totožné, pokud se liší jejich index, strategie nebo jiné důležité vlastnosti.
+- **DRLL:** datum vzniku uvedené emitentem je 8. 8. 2022. Strive popisuje fond jako pasivní a uvádí Bloomberg US Energy Select Index jako aktuální index od 11. 4. 2024.
+- **SHOC:** datum vzniku uvedené emitentem je 5. 10. 2022. Aktuálně uvedený index je Bloomberg US Listed Semiconductors Select Total Return Index od 21. 3. 2024.
+- **BUXX:** datum vzniku uvedené emitentem je 9. 8. 2023. Není přesné popisovat jej hlavně jako fond amerických státních dluhopisů a nástrojů peněžního trhu. Hlavní popis emitenta zdůrazňuje krátkodobá aktiva investičního stupně ve strukturovaném úvěru a podnikovém dluhu.
+- **BOND:** datum vzniku fondu je 29. 2. 2012. Dokument fondu podaný u SEC potvrzuje `BOND` a `Principal Listing Exchange: NYSE`. U nákladů je nutné rozlišovat `Gross Expense Ratio` (0,56 %), `Net Expense Ratio` (0,54 %) a `Adjusted Expense Ratio` (0,45 %); poslední údaj není stejná kategorie jako standardní hrubá nebo čistá nákladovost. Oficiální přehled uvádí, že snížení poplatků zahrnuté v net expense ratio platí do 31. 10. 2026 a automaticky se obnovuje na další rok, pokud jej PIMCO neukončí. Před veřejným spuštěním landing page je proto nutné zkontrolovat nejnovější dokument PIMCO a případnou změnu po tomto datu.
+- **BCEM:** datum vzniku fondu je 8. 4. 2026. Prospekt SEC uvádí `BCEM` a burzu `NYSE`; uvádí také 0,80 % management fee a 0,80 % celkových ročních provozních nákladů. Investičním poradcem je BAMCO, Inc.; Baron Capital je skupina/brand, nikoli přesné označení právního investičního poradce.
 
-Dostupnost konkrétního fondu pro českého retailového investora se může lišit podle brokera a podmínek produktu. Nebudu ji proto automaticky předpokládat.
+### Investiční poradci a sub-advisoři
 
-Konkrétní fondy a jejich údaje budou doplněny po ověření zdrojů.
+Názvy značek fondů se nemusí shodovat s právním označením investičního poradce. V dokumentaci k DRLL a SHOC je jako investiční poradce uvedena **Empowered Funds, LLC dba EA Advisers** a jako sub-adviser **Strive Asset Management, LLC**. U BUXX je jako investiční poradce uvedena Empowered Funds, LLC dba EA Advisers; sub-advisory role mají Strive Asset Management, LLC a Angel Oak Capital Advisors, LLC. Tyto role jsou doloženy v [prospektu DRLL/SHOC](https://www.strivefunds.com/documents/FG/strive_funds/fund_docs/638127_Strive_Prospectus.pdf) a [prospektu BUXX](https://www.strivefunds.com/documents/FG/strive_funds/fund_docs/638178_Strive_Prospectus.pdf).
+
+### Evropské UCITS alternativy
+
+Evropské UCITS fondy budou uvedeny jako **alternativy ke srovnání**, nikoli automaticky jako totožné nebo plnohodnotně ekvivalentní produkty. U každé dvojice je potřeba ověřit přinejmenším index, strategii, složení portfolia, nákladovost, měnu a burzu obchodování.
+
+První ověřený kandidát pro tematické srovnání s `SHOC`:
+
+- **VanEck Semiconductor UCITS ETF** (`SMH`, ISIN `IE00BMC38736`): emitent uvádí Total Expense Ratio **0,35 %** a index **MarketVector US Listed Semiconductor 10% Capped Screened Index**. [Oficiální stránka VanEck pro české individuální investory](https://www.vaneck.com/CZ/en/investments/semiconductor-etf/index/)
+- Tento fond má podobné sektorové zaměření jako SHOC, ale sleduje jiný index. Je tedy kandidátem pro srovnání sektorové expozice, nikoli potvrzeným ekvivalentem SHOC.
+
+Pro ostatní čtyři americké fondy zatím README **neprohlašuje konkrétní UCITS fond za ověřenou alternativu**. Dvojice se doplní až po dohledání a porovnání primárních zdrojů. Pokud nebude nalezena dostatečně podobná alternativa, bude tato skutečnost uvedena otevřeně místo výběru zavádějícího protějšku.
+
+### Pravidla pro prezentaci dat
+
+- U každého údaje bude evidován zdroj, datum ověření a podle potřeby také datum, ke kterému se údaj vztahuje.
+- U amerických fondů bude uvedeno přesné označení burzy z oficiální dokumentace. Informace o tom, že se s fondem obchoduje „v USA“, nestačí.
+- Náklady se budou zobrazovat pod označením, které používá daný zdroj (`Expense Ratio`, `Net Expense Ratio`, `Total Annual Fund Operating Expenses` apod.). Tyto ukazatele se nebudou automaticky považovat za naprosto zaměnitelné.
+- Nákladovost sama o sobě neukazuje, který fond je lepší investice. Fondy s různou strategií se nebudou řadit podle poplatku tak, jako by šlo o produkty se stejným cílem.
+- U každé evropské alternativy bude uvedena její burza a index. Bude jasně odlišeno, zda sdílí stejný index, nebo má pouze podobné investiční zaměření.
+- Dostupnost amerického ETF pro českého retailového investora se nesmí automaticky vyvozovat z jeho listingu na NYSE. Je potřeba ji ověřovat podle dokumentace produktu, KID/PRIIPs a podmínek konkrétního brokera. [Nařízení EU o PRIIPs](https://eur-lex.europa.eu/legal-content/CS/TXT/?uri=CELEX:32014R1286)
+- Odkazy ani náklady nebudou prezentovány jako trvale platné. Před odevzdáním a při každé pozdější aktualizaci se ověří, zda se dokumentace fondu nezměnila.
 
 ## Měření konverzního procesu
 
