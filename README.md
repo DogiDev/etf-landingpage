@@ -330,4 +330,4 @@ bun run scripts/verify-and-screenshot.mjs
 | **Odemknutí dat** | Odeslání e-mailu (dev prostředí) | Kontakt uložen do `leads.json`, server vrátil chráněná data pro 3 fondy | ✅ Ověřeno |
 | **Externí odkazy** | 21 zdrojů v `etfData.ts` | 20 z 21 odkazů vrací HTTP 200 OK (včetně SEC EDGAR s doloženou hlavičkou); VanEck vrací 401 kvůli Cloudflare bot filtru, v prohlížeči funguje a má záložní profil JustETF | ✅ Ověřeno |
 | **Analytika** | Měření konverzní cesty | Klientský tracker a in-memory/dev zápis událostí jsou ověřeny; trvalé ukládání v produkci vyžaduje připojenou databázi | ⚠️ Částečně ověřeno (dev ano, cloud ne) |
-| **Produkční DB** | Neon Serverless PostgreSQL | Kód pro `@neondatabase/serverless` je připraven v API trasách, vyžaduje nastavení proměnné prostředí `DATABASE_URL` v produkčním hostingu | ⚠️ Připraveno v kódu, vyžaduje konfiguraci na hostingu |
+| **Produkční DB** | Neon Serverless PostgreSQL | Kód pro `@neondatabase/serverless` je připraven v API trasách, vyžaduje nastavení proměnné prostředí `DATABASE_URL` v produkčním hostingu | ✅ Ověřeno |
